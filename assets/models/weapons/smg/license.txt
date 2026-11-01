@@ -1,0 +1,8 @@
+Model Information:
+* title:	AK 47 Low Poly
+* source:	https://sketchfab.com/3d-models/ak-47-low-poly-45d261c063b44a9fbf1b8bf110c3936e
+* author:	RomeGD (https://sketchfab.com/RomuloGOD)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
