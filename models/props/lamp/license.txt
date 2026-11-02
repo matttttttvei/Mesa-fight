@@ -1,0 +1,11 @@
+Model Information:
+* title:	Industrial lamp
+* source:	https://sketchfab.com/3d-models/industrial-lamp-ad87a1e1da604bfea9b1276aa33f7952
+* author:	Helsingr (https://sketchfab.com/helsingr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Industrial lamp" (https://sketchfab.com/3d-models/industrial-lamp-ad87a1e1da604bfea9b1276aa33f7952) by Helsingr (https://sketchfab.com/helsingr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
