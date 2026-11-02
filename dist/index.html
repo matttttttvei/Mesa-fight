@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111519">
+  <title>Half-Life: Rodent Outbreak</title>
+  <script type="module" crossorigin src="./assets/game-CoUWVXkl.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-BPGvv_1k.js">
+  <link rel="stylesheet" crossorigin href="./assets/game-BGQ9FDEV.css">
+</head>
+<body>
+  <canvas id="game" tabindex="0" aria-label="3D-арена Half-Life: Rodent Outbreak"></canvas>
+  <div id="hud" hidden>
+    <div id="damage-flash"></div>
+    <div id="damage-direction"></div>
+    <div class="top-left">BLACK MESA <span>/</span> SECTOR 07</div>
+    <div class="top-right">
+      <div id="wave">ВОЛНА: 1</div>
+      <div id="score">СЧЁТ: 0</div>
+      <div id="remaining"></div>
+    </div>
+    <div id="announcement"></div>
+    <div id="crosshair"><i></i><i></i><i></i><i></i><b></b></div>
+    <div id="hit-marker" hidden>×</div>
+    <div id="notifications"></div>
+    <div class="stamina-stat">
+      <span>SHIFT / ВЫНОСЛИВОСТЬ</span><b id="stamina-value">100</b>
+      <div id="stamina" role="progressbar" aria-label="Выносливость" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><i id="stamina-fill"></i></div>
+    </div>
+    <div class="bottom-left">
+      <div class="stat"><span>+ ЗДОРОВЬЕ</span><strong id="health">100</strong></div>
+      <div class="stat"><span>◇ КОСТЮМ HEV</span><strong id="armor">100</strong></div>
+      <div class="flashlight-stat"><span>F / ФОНАРЬ</span><div class="battery"><i id="flashlight-charge"></i></div></div>
+    </div>
+    <div class="bottom-right">
+      <div id="weapon-name">ПИСТОЛЕТ 9MM</div>
+      <div id="ammo">12 <span>| 36</span></div>
+      <div id="reload" hidden>ПЕРЕЗАРЯДКА...</div>
+    </div>
+    <div id="weapon-slots"></div>
+    <pre id="debug" hidden></pre>
+    <pre id="calibration" hidden></pre>
+  </div>
+  <main id="menu" class="overlay">
+    <section class="panel">
+      <div class="eyebrow">BLACK MESA RESEARCH FACILITY</div>
+      <div class="brand"><span class="lambda">λ</span><h1>HALF-LIFE<span>RODENT OUTBREAK</span></h1></div>
+      <p class="intro">Протокол сдерживания нарушен.<br>Выживите в волнах мутантных грызунов.</p>
+      <div id="load-status" role="status">Подготовка арены...</div>
+      <progress id="load-progress" max="1" value="0"></progress>
+      <button id="start" disabled>Загрузка...</button>
+      <label class="compatible"><input id="no-capture" type="checkbox"> Без захвата мыши: обзор средней кнопкой / Q, E</label>
+      <p id="menu-error" role="alert" hidden></p>
+      <details class="controls" open>
+        <summary>Управление</summary>
+        <div><kbd>W A S D</kbd><span>Движение</span><kbd>Мышь</kbd><span>Обзор</span></div>
+        <div><kbd>ЛКМ / ПКМ</kbd><span>Огонь / дуплет</span><kbd>R</kbd><span>Перезарядка</span></div>
+        <div><kbd>Shift</kbd><span>Бег</span><kbd>Пробел</kbd><span>Прыжок</span></div>
+        <div><kbd>Ctrl / C</kbd><span>Присесть</span><kbd>F</kbd><span>Фонарик</span></div>
+        <div><kbd>1–4 / колесо</kbd><span>Оружие</span><kbd>Esc</kbd><span>Пауза</span></div>
+      </details>
+      <p class="hint">SMG — после 1-й волны, дробовик — после 2-й.<br>Оружие появляется в центре арены. Звук отключён, как в оригинале.</p>
+      <p class="hint">Независимый авторский проект. Не связан с Valve и не является официальной игрой компании.</p>
+      <footer><span>JAVASCRIPT / WEBGL</span><a href="./credits.html" target="_blank" rel="noopener">Авторы ресурсов ↗</a></footer>
+    </section>
+  </main>
+  <section id="pause" class="overlay" hidden>
+    <div class="panel compact">
+      <div class="eyebrow">ПРОТОКОЛ ПРИОСТАНОВЛЕН</div>
+      <h2>ПАУЗА</h2>
+      <label for="sensitivity">Чувствительность мыши <output id="sensitivity-value"></output></label>
+      <input id="sensitivity" type="range" min="0.0005" max="0.008" step="0.0001" value="0.0022">
+      <p id="pointer-error" class="hint danger" role="status" hidden></p>
+      <label class="compatible"><input id="pause-no-capture" type="checkbox"> Без захвата мыши: обзор средней кнопкой / Q, E</label>
+      <button id="resume">Продолжить</button>
+      <button id="pause-restart" class="secondary">Начать заново</button>
+      <button id="to-menu" class="secondary">Главное меню</button>
+      <p class="hint">F3 — статистика · F6 — калибровка оружия</p>
+    </div>
+  </section>
+  <section id="game-over" class="overlay" hidden>
+    <div class="panel compact">
+      <div class="eyebrow">ЖИЗНЕННЫЕ ПОКАЗАТЕЛИ: ОТСУТСТВУЮТ</div>
+      <h2 class="danger">ВЫ ПОГИБЛИ</h2>
+      <p id="final-score"></p>
+      <p id="best-score"></p>
+      <button id="restart">Попробовать снова</button>
+      <p class="hint">Enter или R — перезапуск</p>
+    </div>
+  </section>
+  <noscript><div class="overlay"><p>Для игры необходимо включить JavaScript.</p></div></noscript>
+</body>
+</html>
