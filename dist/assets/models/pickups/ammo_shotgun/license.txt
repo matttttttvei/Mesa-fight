@@ -1,0 +1,11 @@
+Model Information:
+* title:	Remington Shotgun Slugger 16. Gauge Shells
+* source:	https://sketchfab.com/3d-models/remington-shotgun-slugger-16-gauge-shells-babb0db87e5d416a9c023ea54e18e6a1
+* author:	Jordan Whincup (https://sketchfab.com/jwhincup)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Remington Shotgun Slugger 16. Gauge Shells" (https://sketchfab.com/3d-models/remington-shotgun-slugger-16-gauge-shells-babb0db87e5d416a9c023ea54e18e6a1) by Jordan Whincup (https://sketchfab.com/jwhincup) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
